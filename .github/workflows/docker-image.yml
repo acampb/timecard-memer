@@ -27,6 +27,7 @@ jobs:
       with:
         images: |
           ghcr.io/${{ github.repository }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build and push Docker images
       uses: docker/build-push-action@v3
@@ -35,9 +36,4 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
-
-
-  #- name: Build the Docker image
-  #  run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
 
