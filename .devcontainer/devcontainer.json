@@ -71,6 +71,7 @@
         "version": "latest"
     }
 	},
+	"forwardPorts": [ 8000 ],
 	"portsAttributes": {
 		"8000": {
 			"label": "django-app"
