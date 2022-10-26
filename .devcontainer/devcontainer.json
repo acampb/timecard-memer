@@ -70,5 +70,10 @@
 		"ghcr.io/devcontainers/features/sshd:1": {
         "version": "latest"
     }
+	},
+	"portsAttributes": {
+		"8000": {
+			"label": "django-app"
+		}
 	}
 }
